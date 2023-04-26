@@ -11,13 +11,14 @@ Follow this guide to deploy and run the service.
          cd edgex-compose/compose-builder/
          ```
 
-      2. Run EdgeX with the microservice in non-secure mode:
+      2. Run EdgeX with the ONVIF microservice in `non-secure mode`:
 
          ```bash
          make run no-secty ds-onvif-camera
          ```
       
-         or run EdgeX with the microservice in secure mode:
+         
+        OR run EdgeX with the ONVIF microservice in `secure mode`:
 
           <div class="admonition note">
              <p class="admonition-title">Note</p>
@@ -26,10 +27,14 @@ Follow this guide to deploy and run the service.
 
          ```bash
          make run ds-onvif-camera
+         make get-consul-acl-token
          ```
 
-=== "Native"
+        !!!NOTE 
+                Make a note of the token generated which will be needed in the next steps to add credentials. 
+                For more information on consul-acl-token refer [Secure Consul](../../../../../security/Ch-Secure-Consul.md)
 
+=== "Native"
 
       <div class="admonition note">
          <p class="admonition-title">Note</p>
